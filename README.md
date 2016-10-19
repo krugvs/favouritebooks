@@ -25,6 +25,8 @@ IDE для Python - PyCharm: https://www.jetbrains.com/pycharm/
 
 3). Создаем виртуальное окружение - virtualenv venv
 
+3.1). Устанавливаем необхдимые пакеты: pip install -r requirements.txt 
+
 4). Активируем виртуальное окружение: source venv/bin/activate для Linux и venv\Scripts\activate для Windows
 
 5). Создаем в mysql базу данных и меняем в файле settings.py настройки базы данных на свои.
