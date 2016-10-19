@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from books.apps.core.views import dashboard
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', dashboard)
 ]
