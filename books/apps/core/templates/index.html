@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+<title>Favorite books</title>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <input name="book_name" type="text" class="form-control" placeholder="Enter Book name">
+        <input name="isbn" type="text" class="form-control" placeholder="Enter ISBN">
+        <input name="pages" type="text" class="form-control" placeholder="Enter Book pages">
+        <input name="year" type="text" class="form-control" placeholder="Enter Book published year">
+        <input name="book_name" type="text" class="form-control" placeholder="Enter Book name">
+        <select name="author_select"  class="form-control" >
+            <option disabled selected>Select author</option>
+            {% for author in authors %}
+                <option value="{{ author.first_name }}">{{ author.last_name }} {{ author.gender }}</option>
+            {% endfor %}
+        </select>
+        <select name="genre_select"  class="form-control">
+            <option disabled selected>Select genre</option>
+            {% for genre in genres %}
+                <option value="{{ genre.genre_name }}">{{ genre.id }}</option>
+            {% endfor %}
+        </select>
+        <button value="Submit" class="btn btn-primary">Submit</button>
+    </div>
+{% endblock %}

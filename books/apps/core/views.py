@@ -14,4 +14,4 @@ def dashboard(request):
         'publishers': publishers,
         'genres': genres
     }
-    return render(request, 'base.html', data)
+    return render(request, 'index.html', data)
